@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우주의 여행</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./page_game.css">
+    <link rel="stylesheet" type="text/css" href="./question.css">
+    <link rel="stylesheet" type="text/css" href="./loaing.css">
+    <link rel="stylesheet" type="text/css" href="./page_home.css">
+    <link rel="stylesheet" type="text/css" href="./page_clear.css">
+    <link rel="stylesheet" type="text/css" href="./animation.css">
+    
+</head>
+<body>
+    <div id="opening" class="scrollingBG">
+        <div class="title">
+            <h1>우주의 여행</h1>
+        </div>
+        <div class="start">
+            <button id="start-btn">산책가기</button>
+            <button id="info-btn">조작방법</button>
+        </div>
+    </div>
+
+    <div id="loading_page1" class="scrollingBG">
+        <div class="loading_count">
+            <div class="loading_text"><span id="loading_num">0</span>%</div>
+        </div>
+        <div class="loading_title">
+            <h3>Tip! 초콜렛을 먹으면 속도 감소 디버프가 걸립니다.</h3>
+        </div>
+    </div>
+
+    <div id="main-bg">
+        <div class="main-flower1">
+            <img src="./img/bg_flower1.png" alt="">
+        </div>
+        <div class="main-flower2">
+            <img src="./img/bg_flower2.png" alt="">
+        </div>
+        <!-- main -->
+        <div id="main">
+            <div class="point">
+                <div class="point-text"><span id="point-txt">0</span>/5</div>
+            </div>
+            <div class="main-button">
+                <button id="main-btn"></button>
+            </div>
+            <div id="character" style="left: 600px; top: 350px;"></div>
+            <div id="wall">
+                <div class="wall first"></div>
+                <div class="wall second"></div>
+                <div class="wall third"></div>
+                <div class="wall four"></div>
+                <div class="wall five"></div>               
+                <div class="wall six"></div>
+                <div class="wall seven"></div>
+                <div class="wall eight"></div>
+                <div class="wall nine"></div>
+                <div class="wall ten"></div>
+                <div class="wall eleven"></div>
+                <div class="wall twelve"></div>
+                <div class="wall thirdtn"></div>
+                <div class="wall fourtn"></div>
+                <div class="wall fifth"></div>
+                <div class="wall sixth"></div>
+                <div class="wall seventn"></div>
+                <div class="wall eightn"></div>
+            </div>
+
+            <!-- item -->
+            <!-- class는 그대로 두고 id를 주어야 하는 듯 -->
+            <div class="item">
+                <div class="item-enemy chocolate bounce3"></div>
+                <div class="item-enemy grape bounce2"></div>
+                <div class="item-enemy onion bounce"></div>
+
+                <div class="item-good blueberry bounce2"></div>
+                <div class="item-good goguma bounce3"></div>
+                <div class="item-good apple bounce3"></div>
+                <div class="item-good paprika bounce2"></div>
+                <div class="item-good pumpkin bounce2"></div>
+            </div>
+            <div class="item-home home"></div>
+
+
+
+            <!-- modal -->
+            <div class="modal-bg" id="homeclose">
+                <div class="modal homeclose">
+                    <div class="modal-home">
+                        <h1>간식 5개를 모아야<br>집에 들어갈 수 있어!</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg" id="homeclear">
+                <div class="modal homeclear">
+                    <div class="modal-home">
+                        <h1>집에 무사히 도착했어!</h1>
+                        <button id="home-btn">들어가기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- item-enemy -->
+            <!--초콜릿 -->
+            <div class="modal-bg" id="chocolate">
+                <div class="modal">
+                    <div class="modal-enemy">
+                        <h1>초콜릿</h1>
+                        <p>
+                            초콜릿은 강아지에게 <span class="text-red">위험한 음식</span>입니다.<br>
+                            초콜릿에 들어있는 <b>카페인</b>과 <b>테오브로민</b>이 강아지에게 영향을 주는 물질입니다.<br>
+                            초콜릿을 먹었다고 해서 무조건 위험하지는 않지만, 독성 반응을 일으킬 만한 양을 먹었을 때는 그 상황을 심각하게 여겨야 합니다.
+                        </p>
+                        <p>
+                            <span class="text-red">증상<br></span> 
+                            심장 박동 증가, 과도한 흥분 상태, 배뇨증가, 근육경련, 고열, 발작, 혼수상태, 사망
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 포도 -->
+            <div class="modal-bg" id="grape">
+                <div class="modal">
+                    <div class="modal-item"> <!-- -->
+                        <h1>포도</h1>
+                        <p>
+                            포도는 반려견에게 <span class="text-red">위험한 음식</span>입니다.<br>
+                            포도에는 당질, 각종 비타민, 구연산, 칼륨 등이 풍부하게 들어있어서 사람이 섭취 시
+                            피로해소에 도움이 되지만, <br>
+                            <b>강아지가 섭취하게 되면 급성 신부전을 일으킬 수 있습니다.</b>
+                        </p>
+                        <p>
+                            <span class="text-red">증상<br></span> 
+                            식욕부진, 무기력, 구토 및 설사, 급성 신부전, 신장 기능 저하 등
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 양파 -->
+            <div class="modal-bg" id="onion">
+                <div class="modal">
+                    <div class="modal-item"> <!-- -->
+                        <h1>양파</h1>
+                        <p>
+                            양파는 반려견에게 <span class="text-red">가장 위험한 음식</span>입니다.<br>
+                            양파에는 <b>엔-프로필 디설파이드</b>라는 독성 성분이 들어있는데, 이것은 적혈구가 산소를 운반하는 것을 방해합니다.<br>
+                            <span class="text-red">양파 및 파와 관련된 모든 것</span>이 위험합니다.<br>
+
+                        </p>
+                        <p>
+                            <span class="text-red">증상<br></span> 
+                            입에서 양파 냄새, 혼수상태, 구토, 설사, 붉은 소변 등
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- item-good -->
+            <!-- 블루베리 -->
+            <div class="modal-bg" id="blueberry">
+                <div class="modal">
+                    <div class="modal-item">
+                        <h1>블루베리</h1>
+                        <p>
+                            블루베리는 반려견에게 <b>좋은 과일</b>입니다.<br>
+                            블루베리에는 비타민A, 비타민C, 안토시아닌 등이 풍부해 강아지의 피부, 모질개선에 큰 도움을 줍니다<br>
+                            <b>과도한 양을 급여하면 설사를 유발할 수 있습니다.</b><br><br>
+                            블루베리는 우주가 좋아하는 과일 입니다! +2
+                        </p>
+                        <p>
+                            <span class="text-orange">주의사항<br></span> 
+                            과도한 급여 시 설사 유발
+                        </p>
+                    </div>
+                </div>
+            </div>    
+            <!-- 고구마 -->
+            <div class="modal-bg" id="goguma">
+                <div class="modal">
+                    <div class="modal-item">
+                        <h1>고구마</h1>
+                        <p>
+                            고구마는 반려견에게 <b>좋은 음식</b>입니다.<br>
+                            고구마에는 비타민 A가 풍부하여 반려견의 털, 피부, 눈, 근육에 좋습니다. <br>
+                            <b>고구마는 쪄서 주는 것이 가장 좋습니다.</b>
+                        </p>
+                        <p>
+                            <span class="text-orange">주의사항<br></span> 
+                            고구마 줄기에는 LSD와 유사한 독성성분이 포함되어 있어, 반려견에게 급여하면 안됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg" id="apple">
+                <div class="modal">
+                    <div class="modal-item">
+                        <h1>사과</h1>
+                        <p>
+                            사과는 반려견에게 <b>좋은 음식</b>입니다.<br>
+                            사과에는 비타민 A, 비타민 C 등의 건강에 좋은 성분들이 다량 함유되어 있습니다.<br>
+                            <b>성장중인 강아지들에게 사과의 성분은 관절 건강 및 소화건강을 향상</b>시키는데 도움을 줄 수 있다.
+                        </p>
+                        <p>
+                            <span class="text-orange">주의사항<br></span> 
+                            사과 씨, 껍질 몸통부분은 꼭 제거하고 급여해야 합니다.<br>
+                            과도한 복용 시 복통 유발
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg" id="paprika">
+                <div class="modal">
+                    <div class="modal-item">
+                        <h1>파프리카</h1>
+                        <p>
+                            파프리카는 반려견에게 <b>좋은 음식</b>입니다.<br>
+                            고구마에는 비타민 A가 풍부하여 반려견의 털, 피부, 눈, 근육에 좋습니다. <br>
+                            <b>고구마는 쪄서 주는 것이 가장 좋습니다.</b>
+                        </p>
+                        <p>
+                            <span class="text-orange">주의사항<br></span> 
+                            고구마 줄기에는 LSD와 유사한 독성성분이 포함되어 있어, 반려견에게 급여하면 안됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg" id="pumpkin">
+                <div class="modal">
+                    <div class="modal-item">
+                        <h1>단호박</h1>
+                        <p>
+                            단호박 반려견에게 <b>좋은 음식</b>입니다.<br>
+                            단호박에는 식이섬유가 풍부해서 변비 혹은 설사하는 강아지에게 좋고 
+                            비타민 A,B,C가 풍부해 면역력 강화, 피로회복에도 효과적입니다.<br>
+                            <b>충분히 푹 익힌 후, 으깨서 부드러운 상태로 급여</b>하면 좋습니다.
+                        </p>
+                        <p>
+                            <span class="text-orange">주의사항<br></span> 
+                            씨앗 제거 후 급여해야 합니다.<br>
+                            부드러운 음식은 치석이 생기기 쉬우므로 양치질을 꼭 해줘야 합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div> <!-- main -->
+
+    </div>
+
+    <div id="question-bg">
+        <div class="main-flower1">
+            <img src="./img/bg_flower1.png" alt="">
+        </div>
+        <div class="main-flower2">
+            <img src="./img/bg_flower2.png" alt="">
+        </div>
+        <div id="question">
+            <div class="title">
+                <h3>틈새 Quiz</h3>
+                <h3>다음 중 우주가 먹을 수 없는 음식은?</h3>
+                <h3>드래그로 우주에게 음식을 줘봅시다.</h3>
+            </div>
+            <div id="dog-img"></div>
+            <div class="foodicon choco bounce"></div>
+            <div class="foodicon pumpkin bounce"></div>
+            <div class="foodicon paprika bounce2"></div>
+            <div class="foodicon goguma bounce"></div>
+            <div class="foodicon apple bounce2"></div>
+            <div class="foodicon blueberry bounce"></div>
+            <!-- stage2 button -->
+            <div class="stage2-button">
+                <button id="stage2-btn">다음 스테이지</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="loading_page2">
+
+    </div>
+
+    <!-- stage home -->
+    <div id="stage-bg">
+        <div class="main-light">
+            <img src="./img/bg_light.png" alt="">
+        </div>
+        <div class="main-plant">
+            <img src="./img/bg_plant.png" alt="">
+        </div>
+        <div id="stage-home">
+            <div id="stage2" class="point">
+                <div class="point-text"><span id="point-txt2">0</span>/10</div>
+            </div>
+            <div id="character2" style="left: 600px; top: 350px;"></div>
+            <div id="wall2">
+                <div class="wall2 first"></div>
+                <div class="wall2 second"></div>
+                <div class="wall2 third"></div>
+                <div class="wall2 four"></div>
+                <div class="wall2 five"></div>
+                <div class="wall2 six"></div>
+                <div class="wall2 seven"></div>
+                <div class="wall2 eight"></div>
+                <div class="wall2 nine"></div>
+                <div class="wall2 ten"></div>
+                <div class="wall2 eleven"></div>
+                <div class="wall2 twelve"></div>
+                <div class="wall2 thirdtn"></div>
+            </div>
+            <div class="item2">
+                <div class="item-good ball bounce2"></div>
+                <div class="item-good ball2 bounce2"></div>
+                <div class="item-good ball3 bounce"></div>
+                <div class="item-good bear bounce3"></div>
+                <div class="item-good bear2 bounce3"></div>
+                <div class="item-good bear3 bounce2"></div>
+                <div class="item-good coffee bounce3"></div>
+                <div class="item-good bone bounce2"></div>
+                <div class="item-good bone2 bounce2"></div>
+                <div class="item-good roll bounce2"></div>
+            </div>
+        </div>
+    </div> <!--stage home-->
+    <div id="stage-clear">
+        <div id="stageclear">
+            <div class="stage-clear-text">
+                <h3>수료증</h3>
+                <h3>
+                    위 사람은 반려견인 우주를 잘 놀아주고<br>
+                    반려견에게 적절한 먹이 주는 방법을 익혔으므로<br>
+                    이 수료증을 수여합니다.
+                </h3>
+                <h3>강아지 대표  최  우  주</h3>
+            </div>
+            <div id="dog-stamp"></div>
+            <div id="dog-stamp-clear"><p>도장</p></div>
+        </div>
+
+    </div>
+
+
+<!-- index -> game 이동 script -->
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./game.js"></script>
+<script type="text/javascript" src="./game2.js"></script>
+<script type="text/javascript" src="./question.js"></script>
+<script type="text/javascript" src="./loading.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+ <!-- 범위내 foodicon 이동 -->
+<script>
+    $(() => {
+        $('.foodicon').draggable({
+            containment : '#question'
+        });
+        $('#dog-img').droppable({
+                accept : '.choco',
+                drop : function() {
+                    $(this)
+                    .addClass('right'),
+                    $('#stage2-btn')
+                    .addClass('active');
+                }
+         });
+
+         $('#dog-stamp').draggable({
+            containment : '#stageclear'
+        });
+        $('#dog-stamp-clear').droppable({
+                drop : function() {
+                    $(this)
+                    .addClass('clear');
+                }
+         });
+         
+    })
+
+    
+</script>
+
+<!-- <script type="text/javascript" src="wall.js"></script> -->
+</body>
+</html>

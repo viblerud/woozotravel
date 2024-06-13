@@ -1,0 +1,113 @@
+#question-bg {
+    /* 제작 끝나고 주석지우기 */
+    display: none; 
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/main_bg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+#question {
+    /* border: solid 1px #ccc; */
+    background-image: url(./img/quiz-bg1.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 800px;
+}
+#question-bg.active {
+    display: block;
+}
+#question .title {
+    padding-top: 30px;
+}
+#question .title h3:nth-child(1) {
+    font-size: 3rem;
+}
+#question .title h3:nth-child(2) {
+    padding-top: 10px;
+    font-size: 2rem;
+}
+#question .title h3:nth-child(3) {
+    padding-top: 20px;
+    font-size: 1.7rem;
+}
+#question .title p {
+    font-family: 'pretendard';
+    font-size: 1.3rem;
+}
+#dog-img {
+    margin: 0 auto;
+    /* background-color: #ccc; */
+    background-image: url(./img/dog.png);
+    background-size: 100%;
+    margin-top: 70px;
+    width: 330px;
+    height: 450px;
+}
+#dog-img.right {
+    background-image: url(./img/dog_answer.png);
+}
+.foodicon {
+    /* background-color: aquamarine; */
+    width: 100px;
+    height: 100px;
+}
+.foodicon.choco {
+    background-image: url(./img/food-chocolate.png);
+    position: absolute;
+    top: 400px;
+    left: 300px;
+}
+.foodicon.goguma {
+    background-image: url(./img/food-goguma.png);
+    position: absolute;
+    top: 250px;
+    left: 350px;
+}
+.foodicon.paprika {
+    background-image: url(./img/food-paprika.png);
+    position: absolute;
+    top: 550px;
+    left: 350px;
+}
+.foodicon.pumpkin {
+    background-image: url(./img/food-pumpkin.png);
+    position: absolute;
+    top: 250px;
+    right: 350px;
+}
+.foodicon.apple {
+    background-image: url(./img/food-apple.png);
+    position: absolute;
+    top: 400px;
+    right: 300px;
+}
+.foodicon.blueberry {
+    background-image: url(./img/food-blueberry.png);
+    position: absolute;
+    top: 550px;
+    right: 350px;
+}
+#stage2-btn {
+    display: none;
+    width: 190px;
+    height: 153px;
+    background-image: url(./img/stage2_btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    font-family: 'cookierun';
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    padding: 16px 20px 120px 20px;
+    text-align: center;
+    position: absolute;
+    right: 50px;
+    top: 400px;
+}
+#stage2-btn.active {
+    display: block;
+}

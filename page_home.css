@@ -1,0 +1,204 @@
+#stage-bg {
+    /* 작업할때마다 켰다끄기 */
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/home-bg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+#stage-bg.active {
+    display: block;
+}
+.main-light, .main-plant {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+.main-light {
+    left: 180px;
+}
+.main-plant {
+    right: 130px;
+}
+
+#stage-home {
+    /* 제작 끝나고 주석지우기 */
+    /* display: none;  */
+    /* border: solid 1px #ccc; */
+    /* background-color: rgb(255, 245, 217); */
+    background-image: url(./img/home_bg.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 800px;
+}
+#stage2 {
+    background-image: url(./img/score2_bg.png);
+}
+
+/* itme */
+.item-enemy.dust{
+    background-image: url(./img/dust.png);
+    position: absolute;
+    top: 100px;
+    left: 600px;
+}
+
+
+
+.item-good.ball{
+    background-image: url(./img/ball.png);
+    position: absolute;
+    top: 50px;
+    left: 500px;
+}
+.item-good.ball2{
+    background-image: url(./img/ball.png);
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+.item-good.ball3{
+    background-image: url(./img/ball.png);
+    position: absolute;
+    bottom: 0px;
+    left: 400px;
+}
+.item-good.bear {
+    background-image: url(./img/bear.png);
+    position: absolute;
+    top: 500px;
+    left: 300px;
+}
+.item-good.bear2 {
+    background-image: url(./img/bear.png);
+    position: absolute;
+    top: 300px;
+    left: 600px;
+}
+.item-good.bear3 {
+    background-image: url(./img/bear.png);
+    position: absolute;
+    bottom: 50px;
+    right: 300px;
+}
+.item-good.coffee {
+    background-image: url(./img/coffee.png);
+    position: absolute;
+    top: 400px;
+    right: 200px;
+}
+.item-good.bone {
+    background-image: url(./img/bone.png);
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+.item-good.bone2 {
+    background-image: url(./img/bone.png);
+    position: absolute;
+    bottom: 150px;
+    left: 600px;
+}
+.item-good.roll {
+    background-image: url(./img/toilet-roll.png);
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+
+/* wall2 */
+
+.wall2 {
+    /* background-color: #ccc; */
+    width: 200px;
+    height: 100px;
+    background-image: url(./img/dust.png);
+}
+.wall2.first {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 500px;
+}
+.wall2.second {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 100px;
+    width: 700px;
+}
+.wall2.third {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 400px;
+}
+.wall2.four {
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    width: 500px;
+    height: 50px;
+
+}
+.wall2.five {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    width: 250px;
+}
+.wall2.six {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    width: 450px;
+}
+.wall2.seven {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    width: 400px;
+}
+.wall2.eight {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    width: 350px;
+}
+.wall2.nine {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    width: 500px;
+    height: 50px;
+}
+.wall2.ten {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    width: 300px;
+}
+.wall2.eleven {
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    width: 500px;
+}
+.wall2.twelve {
+    position: absolute;
+    top: 500px;
+    right: 0px;
+    width: 300px;
+    height: 300px;
+}
+.wall2.thirdtn {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+}

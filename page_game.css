@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'pretendard';
+}
+
+#main-bg {
+     /*작업할때마다 켰다끄기*/
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/main_bg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+#main-bg.active {
+    display: block;
+}
+.main-flower1, .main-flower2 {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+.main-flower1 {
+    left: 0;
+}
+.main-flower2 {
+    right: 0;
+}
+#main {
+    /* border: solid 1px #ccc; */
+    /* background-color: rgb(88, 222, 139); */
+    background-image: url(./img/game_bg.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 800px;
+}
+
+
+.point {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 120px;
+    height: 50px;
+    /* background-color: aqua; */
+    background-image: url(./img/score_bg.png);
+    z-index: 1;
+    /* border-radius: 50px; */
+}
+.point-text {
+    text-align: center;
+    padding: 9px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'CookieRun';
+}
+#main-btn {
+    width: 60px;
+    height: 59px;
+    background-image: url(./img/gomain_btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    /* margin: 20px 25px 20px 1210px; */
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1;
+}
+
+
+#character, #character2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    width: 50px;
+    height: 50px;
+    /* background-color: black; */
+    background-image: url(./img/player_front.png);
+    /* transition: left 0.2s ease, top 0.2s ease; */
+}
+.item-home.home {
+    position: absolute;
+    top: 550px;
+    left: 700px;
+    width: 150px;
+    height: 150px;
+    background-image: url(./img/home.png);
+    background-repeat: no-repeat;
+}
+/* #wall {
+    border: solid 1px #ccc;
+} */
+.wall {
+    /* background-color: #ccc; */
+    width: 200px;
+    height: 100px;
+    background-image: url(./img/treemodel.png);
+}
+.wall.first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100px;
+}
+.wall.second {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100px;
+}
+.wall.third {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 650px;
+    height: 50px;
+}
+.wall.four{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 300px;
+}
+.wall.five {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 50px;
+    height: 650px;
+}
+.wall.six {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 300px;
+    height: 100px;
+}
+.wall.seven {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    width: 350px;
+    height: 100px;
+}
+
+.wall.eleven {
+    position: absolute;
+    top: 250px;
+    right: 100px;
+    width: 100px;
+    height: 150px;
+}
+.wall.twelve {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    width: 50px;
+    height: 550px;
+}
+.wall.thirdtn {
+    position: absolute;
+    top: 350px;
+    right: 250px;
+    width: 150px;
+    height: 200px;
+}
+.wall.fifth {
+    position: absolute;
+    top: 710px;
+    left: 50px;
+    width: 400px;
+    height: 100px;
+}
+.wall.eight {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    top: 450px;
+    left: 200px;
+    width: 250px;
+    height: 50px;
+}
+.wall.nine {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    width: 200px;
+    height: 50px;
+}
+.wall.ten {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    width: 300px;
+    height: 50px;
+}
+.wall.fourtn {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    bottom: 0;
+    left: 550px;
+    width: 400px;
+    height: 50px;
+}
+.wall.sixth {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    bottom: 200px;
+    left: 150px;
+    width: 200px;
+    height: 50px;
+}
+.wall.seventn {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 200px;
+    height: 100px;
+}
+.wall.eightn {
+    background-image: url(./img/grass.png);
+    background-position: left bottom;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    width: 150px;
+    height: 50px;
+}
+
+
+/* item */
+.item-enemy {
+    width: 50px;
+    height: 50px;
+    /* background-color: orange; */
+}
+.item-enemy.chocolate {
+    background-image: url(./img/choco.png);
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+.item-enemy.grape {
+    background-image: url(./img/grape.png);
+    position: absolute;
+    top: 700px;
+    right: 400px;
+}
+.item-enemy.onion {
+    background-image: url(./img/onion.png);
+    position: absolute;
+    top: 450px;
+    left: 150px;
+}
+.item-enemy.bee {
+    background-image: url(./img/bee.png);
+    position: absolute;
+    top: 200px;
+    left: 350px;
+}
+.item-enemy.bee2 {
+    background-image: url(./img/bee.png);
+    position: absolute;
+    bottom: 100px;
+    left: 450px;
+}
+
+.item-good {
+    width: 50px;
+    height: 50px;
+    /* background-color: blue; */
+}
+.item-good.blueberry{
+    background-image: url(./img/blueberry.png);
+    position: absolute;
+    top: 200px;
+    left: 600px;
+}
+.item-good.goguma {
+    background-image: url(./img/goguma.png);
+    position: absolute;
+    top: 500px;
+    left: 400px;
+}
+.item-good.apple {
+    background-image: url(./img/apple.png);
+    position: absolute;
+    top: 400px;
+    right: 200px;
+}
+.item-good.paprika {
+    background-image: url(./img/paprika.png);
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+.item-good.pumpkin {
+    background-image: url(./img/pumpkin.png);
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+
+/* modal */
+.modal-bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+#home {
+    display: none;
+}
+.exit {
+    display: block;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 350px;
+    /* background-color: white; */
+    background-image: url(./img/memo.png);
+    /* border-radius: 20px; */
+    /* border: solid 2px #ccc; */
+    z-index: 1;
+}
+.modal.homeclose {
+    width: 400px;
+    height: 150px;
+}
+.modal.homeclear {
+    width: 400px;
+    height: 170px;
+    text-align: center;
+}
+.modal-enemy, .modal-item {
+    width: 88%;
+    height: 90%;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -.05rem;
+}
+.modal-enemy h1, .modal-item h1 {
+    text-align: left;
+    font-family: 'CookieRun';
+    padding-top: 10px;
+    font-size: 2.2rem;
+}
+.modal-home h1 {
+    text-align: center;
+    font-family: 'CookieRun';
+    padding-top: 25px;
+    font-size: 2.2rem;
+}
+.modal-enemy p, .modal-item p {
+    text-align: left;
+    padding-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+#home-btn {
+
+    font-family: 'pretendard';
+    border: none;
+    background-color: #2AC59E;
+    padding: 15px 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+
+.text-red {
+    color: red;
+    font-weight: bold;
+}
+.text-orange {
+    color: orange;
+    font-weight: bold;
+}

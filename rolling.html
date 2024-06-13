@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+    /* webkit only */
+    .slideInLeftBig {
+        animation: slideInLeftBig 10s linear;
+    }
+    @keyframes slideInLeftBig {
+        0% {
+        -webkit-transform: translateX(-99%);
+        opacity: 0;
+        }
+        1% {
+        -webkit-transform: translateX(-99%);
+        opacity: 1;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        }
+    }
+
+    .scrollingBG {
+        background: url(./img/bg.png);
+        animation: 10s scrollingBG infinite linear;
+        height: 800px;
+    }
+    @keyframes scrollingBG {
+        100% {
+        background-position: -200px 0px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+<div class="anim-container">
+  <div class="scrollingBG">
+    <div class="slideInLeftBig" style="padding-top:50px; padding-bottom:25px; text-align:center;">
+    </div>
+  </div>
+</div>
+</body>
+</html>

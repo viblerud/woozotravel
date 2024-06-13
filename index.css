@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'pretendard';
+}
+#opening {
+    /* border: solid 1px #ccc; */
+    /* background-color: white; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 800px;
+    opacity: 1;
+    transition: linear .3s ease;
+    background-size: 100%;
+}
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: -0.1rem;
+    padding-top: 150px;
+    font-family: 'CookieRun';
+}
+.start {
+    text-align: center;
+}
+#start-btn, #info-btn {
+    font-family: 'CookieRun';
+    font-size: 1.3rem;
+    border: none;
+    /* background-color: #fff; */
+    background-image: url(./img/main_btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 12px;
+    width: 186px;
+    height: 59px;
+    /* border-radius: 50px; */
+    margin: 210px 5px 0 5px;
+    letter-spacing: -1px;
+}
+button:hover {
+    /* background-color: #FF8185; */
+    font-weight: 600;
+    /* transition: linear 0.1s; */
+}   
+button:active {
+    position: relative;
+    top:2px;
+}
+
+/* rolling */
+/* 출처 https://codepen.io/robd/pen/RVBjdP */
+.scrollingBG {
+    background: url(./img/bg.png);
+    animation: 50s scrollingBG infinite linear;
+}
+@keyframes scrollingBG {
+    100% {
+    background-position: -1000px 0px;
+    }
+}

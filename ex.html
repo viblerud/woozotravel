@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #map {
+            position: relative;
+            width:1000px;
+            height:1000px;
+            background:aqua;
+        }
+        .box {
+            position: absolute;
+            top:0;
+            left:0;
+            width:100px;
+            height:100px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+<div id="map">
+    <div class="box" style="left:0;top:0;"></div>
+</div>
+
+<script>
+    let map = document.querySelector('#map');
+    let box = document.querySelector('.box');
+    let step = 100;
+
+    document.addEventListener('keydown', (e) => {
+        const mapRect = map.getBoundingClientRect();
+        const boxRect = box.getBoundingClientRect();
+        const currentLeft = boxRect.left - mapRect.left;
+        const currentTop = boxRect.top - mapRect.top;
+
+        let canMove = true;
+
+        if (e.key === 'ArrowLeft') {
+            if (currentLeft - step >= 0) {
+                box.style.left = currentLeft - step + 'px';
+            } else {
+                canMove = false;
+            }
+        } else if (e.key === 'ArrowRight') {
+            if (currentLeft + step + box.offsetWidth <= map.offsetWidth) {
+                box.style.left = currentLeft + step + 'px';
+            } else {
+                canMove = false;
+            }
+        } else if (e.key === 'ArrowUp') {
+            if (currentTop - step >= 0) {
+                box.style.top = currentTop - step + 'px';
+            } else {
+                canMove = false;
+            }
+        } else if (e.key === 'ArrowDown') {
+            if (currentTop + step + box.offsetHeight <= map.offsetHeight) {
+                box.style.top = currentTop + step + 'px';
+            } else {
+                canMove = false;
+            }
+        }
+
+        if (!canMove) {
+            alert('안돼');
+        }
+    });
+</script>
+</body>
+</html>

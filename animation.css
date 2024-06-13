@@ -1,0 +1,37 @@
+
+/* 출처 https://codepen.io/nelledejones/pen/gOOPWrK */
+
+.bounce {
+    animation: bounce 3s ease-in-out infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-2px);}
+    60% {transform: translateY(-2px);}
+}
+
+.bounce2 {
+    animation: bounce2 2s ease-in-out infinite;
+}
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-2px);}
+    60% {transform: translateY(-2px);}
+}
+
+.bounce3 {
+    animation: bounce3 3s ease-in-out infinite;
+}
+@keyframes bounce3 {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-1px);}
+    60% {transform: translateY(-1px);}
+}
+
+/* .fade {
+    animation: fade 1s linear;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} */
